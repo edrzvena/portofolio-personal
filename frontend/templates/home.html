@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Pedro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Menambahkan Font Awesome -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Pedro Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div>
+            <h1 class="display-4 fw-bold">Hi, I'm Pedro</h1>
+            <p class="lead">A Passionate Developer with a knack for creating impactful solutions</p>
+            <a href="#about" class="btn btn-primary btn-lg shadow-sm">Learn More</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="{% static 'images/myself.jpg' %}" alt="Your Photo" class="img-fluid rounded-circle shadow-lg"> <!-- Path gambar diperbaiki -->
+                </div>
+                <div class="col-md-8">
+                    <h2>About Me</h2>
+                    <p>I'm a Computer Engineering graduate with a passion for software development and IT solutions. With expertise in backend systems, database management, and UI/UX design, I thrive on solving complex problems and delivering seamless user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Experience</h2>
+            <div class="timeline">
+                <!-- Kolom Kiri -->
+                <div class="timeline-item timeline-left">
+                    <h4>Administration</h4>
+                    <p><strong>Toko Purnama</strong> | 2019 - 2020</p>
+                    <p>With comprehensive experience in retail operations, I successfully manage store operations, provide outstanding customer service, and maintain efficient stock warehouse management.</p>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div class="timeline-item timeline-right">
+                    <h4>Security Officer</h4>
+                    <p><strong>PT. GFC Terpadu</strong> | 2022 - present</p>
+                    <p>Monitored and analyzed security systems, ensuring optimal performance and data integrity.</p>
+                </div>
+
+                <!-- Kolom Kiri -->
+                <div class="timeline-item timeline-left">
+                    <h4>Marketing Online</h4>
+                    <p><strong>PT. Usaha Inti Bersama</strong> | 2020 - 2022</p>
+                    <p>With extensive experience in online marketing and e-commerce management, I successfully manage online shops, create engaging digital content, and analyze market trends to optimize sales.</p>
+                </div>
+
+                <!-- Kolom Kanan -->
+                <div class="timeline-item timeline-right">
+                    <h4>Intern</h4>
+                    <p><strong>Company Name</strong> | Jun 2017 - Dec 2017</p>
+                    <p>Assisted senior developers in testing and debugging applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">My Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Python</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>JavaScript</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>HTML & CSS</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Django</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>SQL</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>React</h5>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 60%;">60%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="{% static 'images/hero-bg.jpg' %}" class="card-img-top" alt="Project 1"> <!-- Path gambar diperbaiki -->
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 1</h5>
+                            <p class="card-text">A brief description of the project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="{% static 'images/hero-bg.jpg' %}" class="card-img-top" alt="Project 2"> <!-- Path gambar diperbaiki -->
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 2</h5>
+                            <p class="card-text">A brief description of the project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="{% static 'images/hero-bg.jpg' %}" class="card-img-top" alt="Project 3"> <!-- Path gambar diperbaiki -->
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 3</h5>
+                            <p class="card-text">A brief description of the project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary shadow-sm">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>&copy; 2025 My Portfolio</p>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" class="mx-2" style="color: #000;"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me" target="_blank" class="mx-2" style="color: #000;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="mx-2" style="color: #000;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

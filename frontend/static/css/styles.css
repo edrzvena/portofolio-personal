@@ -1,0 +1,318 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 100px; /* Menambahkan jarak di atas */
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/hero-bg.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    height: 80vh;
+    margin: 25px auto;
+    max-width: 97%;
+    position: relative;
+    overflow: hidden;
+    align-items: center; /* Ini yang memastikan konten berada di tengah secara vertikal */
+    text-align: center; /* Ini memastikan teks berada di tengah secara horizontal */
+    box-shadow: 0px 4px 20px rgb(0, 0, 0);
+}
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px; /* Memberi jarak antara judul dan paragraf */
+    animation: fadeIn 2s ease-in-out;
+    color: #ffffff;
+}
+.hero-section p {
+    font-size: 1.25rem;
+    margin-top: 0; /* Menghapus margin atas */
+    animation: fadeIn 3s ease-in-out;
+    color: #ffffff;
+}
+
+/* Navbar Custom Styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+h2::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 0.5rem auto 0;
+}
+
+/* About Section */
+#about img {
+    width: 400px; /* Ukuran lingkaran */
+    height: 400px; /* Ukuran lingkaran */
+    border-radius: 50%; /* Membuat gambar jadi lingkaran */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    border: 5px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#about img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Timeline */
+.timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom: kiri dan kanan */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.timeline-item {
+    position: relative;
+    padding: 1rem;
+}
+.timeline-left {
+    text-align: right;
+    grid-column: 1 / 2;
+}
+.timeline-right {
+    text-align: left;
+    grid-column: 2 / 3;
+}
+.timeline-item h4 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+.timeline-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Skills Section */
+#skills .skill-bar {
+    background: #f1f1f1;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+    height: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#skills .skill-bar-fill {
+    background: linear-gradient(90deg, #007bff, #00c3ff, #007bff);
+    background-size: 300% 100%;
+    height: 100%;
+    line-height: 30px;
+    color: #fff;
+    text-align: right;
+    padding-right: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    animation: skill-fill-animation 1.5s ease-in-out;
+    animation-delay: var(--animation-delay);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* Animasi Warna Gradasi */
+@keyframes skill-fill-animation {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Gradasi Warna Animasi */
+#skills .skill-bar-fill:hover {
+    animation: gradient-shift 2s infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* H5 Titles */
+#skills h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Responsive & Final Touches */
+@media (max-width: 768px) {
+    #skills .skill-bar {
+        height: 25px;
+    }
+
+    #skills .skill-bar-fill {
+        line-height: 25px;
+        padding-right: 10px;
+    }
+
+    #skills h5 {
+        font-size: 1rem;
+    }
+}
+
+
+/* Project Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #007bff;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #ffffff;
+    border-radius: 15px;
+    color: #000000;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.btn-primary:hover {
+    background: #0000001a;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    color: #ffffff;
+    padding: 3rem 1rem;
+}
+#contact .form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+    color: #000000;
+}
+#contact .form-control:focus {
+    border-bottom: 2px solid #010101;
+    box-shadow: none;
+}
+#contact button {
+    background: #fff;
+    color: #007bff;
+    transition: background 0.3s, color 0.3s;
+}
+#contact button:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+/* Footer with Social Links */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+footer:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+footer .social-icons a {
+    color: #ffffff !important; /* Menetapkan warna hitam */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+footer .social-icons a:hover {
+    color: #000000 !important; /* Warna saat hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Enhancements */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* Footer Styles */
+footer .social-icons {
+    margin-top: 1rem;
+}
